@@ -79,4 +79,4 @@ CREATE INDEX question_idx
 
 题目出现后点击自动搜索将先使用题库搜索结果，未找到结果时自动使用网络搜索。
 
-![demo]("./demo.gif")
+![demo](./demo.gif)
