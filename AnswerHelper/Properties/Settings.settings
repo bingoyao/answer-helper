@@ -1,7 +1,30 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AnswerHelper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Host" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5432</Value>
+    </Setting>
+    <Setting Name="DatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">answer_helper</Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">postgres</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bang8468824925</Value>
+    </Setting>
+    <Setting Name="BAIDU_APP_ID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">16720093</Value>
+    </Setting>
+    <Setting Name="BAIDU_API_KEY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FwKisCoWrkzDlnHFjHGagP9I</Value>
+    </Setting>
+    <Setting Name="BAIDU_SECRET_KEY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G0BdWqhesNj6MgaWBUYVfM6LPvBGt5kz</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

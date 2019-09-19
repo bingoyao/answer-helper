@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HtmlAgilityPack;
+using AnswerHelper.Properties;
 
 namespace AnswerHelper
 {
@@ -47,11 +48,8 @@ namespace AnswerHelper
         /// </summary>
         public void initAIClient()
         {
-            var APP_ID = "16720093";
-            var API_KEY = "FwKisCoWrkzDlnHFjHGagP9I";
-            var SECRET_KEY = "G0BdWqhesNj6MgaWBUYVfM6LPvBGt5kz";
-
-            client = new Baidu.Aip.Ocr.Ocr(API_KEY, SECRET_KEY);
+            
+            client = new Baidu.Aip.Ocr.Ocr(Settings.Default.BAIDU_API_KEY, Settings.Default.BAIDU_SECRET_KEY);
             client.Timeout = 10000;
         }
 
@@ -60,7 +58,13 @@ namespace AnswerHelper
         /// </summary>
         private void initQuestionLib()
         {
-            string dbPath = "Server=127.0.0.1;Port=5432;User Id=postgres;Password=bang8468824925;Database=answer_helper;";
+            string dbPath = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
+                                            Settings.Default.Host,
+                                            Settings.Default.Port,
+                                            Settings.Default.Username,
+                                            Settings.Default.Password,
+                                            Settings.Default.DatabaseName
+                                            );
             connection = new NpgsqlConnection(dbPath);
         }
 
@@ -238,8 +242,9 @@ namespace AnswerHelper
         private void answerWithLibBtn_Click(object sender, EventArgs e)
         {
             clearRequest();
-            tabControl1.SelectedIndex = 1;
+            tabControl1.SelectedIndex = 0;
             answerWithLib(extractImg(getImgFromClipboard()));
+
         }
 
         private bool answerWithLib(String query)
@@ -318,11 +323,11 @@ namespace AnswerHelper
             clearRequest();
 
             String query = extractImg(getImgFromClipboard());
-            tabControl1.SelectedIndex = 1;
+            tabControl1.SelectedIndex = 0;
             if (!answerWithLib(query))
             {
                 showMessage("本地题库无结果，正在尝试使用网络搜索...");
-                tabControl1.SelectedIndex = 2;
+                tabControl1.SelectedIndex = 1;
                 answerWithNet(query);
             };
         }
@@ -389,7 +394,7 @@ namespace AnswerHelper
                 String word = (String)wordResult.SelectToken("words");
                 text += word;
             });
-            Console.WriteLine("文字提取结果：" + text);
+            //Console.WriteLine("文字提取结果：" + text);
             showMessage("成功提取到文字：" + text);
             return text;
         }

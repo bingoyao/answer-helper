@@ -33,26 +33,23 @@ namespace AnswerHelper
         {
             connection = conn;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void generateFromNetBtn_Click(object sender, EventArgs e)
         {
             String url = urlEditor.Text.Trim();
+
             HtmlWeb web = new HtmlWeb();
 
             var htmlDoc = web.Load(url);
 
-            Regex rgx = new Regex(@"^\d+\..+");
+            Regex rgx = new Regex(extractEditor.Text.Trim());
 
-            var targetNodes = htmlDoc.DocumentNode.SelectNodes("//p");
-            var targetSentences = targetNodes.SkipWhile(node =>
-            {
-                return !rgx.IsMatch(node.InnerHtml);
-            }).Select(n => n.InnerHtml);
-            foreach(var sen in targetSentences)
-            {
-                Console.WriteLine(sen);
-            }
-
+            ///
+            
         }
 
         private void geberateFromFileBtn_Click(object sender, EventArgs e)

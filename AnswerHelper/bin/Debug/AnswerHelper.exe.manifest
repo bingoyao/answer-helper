@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AnswerHelper.exe" size="29696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AnswerHelper.exe" size="35328">
       <assemblyIdentity name="AnswerHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Kt5N6V0e7tNNhP7yZ7Sw8Ys4rCf71MD8mA7i0ocU4QI=</dsig:DigestValue>
+        <dsig:DigestValue>DW+zCRsbZzaBRjw0qD06px+TE5cw6k24PU2IxV3NC14=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -185,13 +185,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AnswerHelper.exe.config" size="2004">
+  <file name="AnswerHelper.exe.config" size="3456">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>dBxKEGPvBa81gNcq6xic7UHzXNA8EDGyPq8DpTHDyGs=</dsig:DigestValue>
+      <dsig:DigestValue>N1mYOU12PPYeL1zZyq3p3AVp6Yb0VR+vF5x93yxNwu0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

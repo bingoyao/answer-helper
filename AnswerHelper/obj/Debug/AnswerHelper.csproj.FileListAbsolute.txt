@@ -35,4 +35,3 @@ E:\visual studio 2015\Projects\AnswerHelper\AnswerHelper\obj\Debug\AnswerHelper.
 E:\visual studio 2015\Projects\AnswerHelper\AnswerHelper\obj\Debug\AnswerHelper.application
 E:\visual studio 2015\Projects\AnswerHelper\AnswerHelper\obj\Debug\AnswerHelper.exe
 E:\visual studio 2015\Projects\AnswerHelper\AnswerHelper\obj\Debug\AnswerHelper.pdb
-E:\visual studio 2015\Projects\AnswerHelper\AnswerHelper\obj\Debug\AnswerHelper.csprojResolveAssemblyReference.cache

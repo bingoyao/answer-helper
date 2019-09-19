@@ -36,6 +36,8 @@
             this.libManageBtn = new System.Windows.Forms.Button();
             this.setAreaBtn = new System.Windows.Forms.Button();
             this.ctrlPanel = new System.Windows.Forms.Panel();
+            this.maskCurrentUrlBtn = new System.Windows.Forms.Button();
+            this.autoAnswerBtn = new System.Windows.Forms.Button();
             this.guideLabel = new System.Windows.Forms.Label();
             this.answerWithNetBtn = new System.Windows.Forms.Button();
             this.resultsTable = new System.Windows.Forms.TableLayoutPanel();
@@ -43,11 +45,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.nextResultPageBtn = new System.Windows.Forms.Button();
-            this.autoAnswerBtn = new System.Windows.Forms.Button();
             this.preResultPageBtn = new System.Windows.Forms.Button();
-            this.maskCurrentUrlBtn = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.ctrlPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,7 +103,7 @@
             this.libManageBtn.Name = "libManageBtn";
             this.libManageBtn.Size = new System.Drawing.Size(90, 27);
             this.libManageBtn.TabIndex = 4;
-            this.libManageBtn.Text = "题库管理";
+            this.libManageBtn.Text = "应用管理";
             this.libManageBtn.UseVisualStyleBackColor = false;
             this.libManageBtn.Click += new System.EventHandler(this.libManageBtn_Click);
             // 
@@ -140,6 +140,37 @@
             this.ctrlPanel.Name = "ctrlPanel";
             this.ctrlPanel.Size = new System.Drawing.Size(684, 112);
             this.ctrlPanel.TabIndex = 6;
+            // 
+            // maskCurrentUrlBtn
+            // 
+            this.maskCurrentUrlBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.maskCurrentUrlBtn.BackColor = System.Drawing.Color.Tomato;
+            this.maskCurrentUrlBtn.FlatAppearance.BorderSize = 0;
+            this.maskCurrentUrlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maskCurrentUrlBtn.ForeColor = System.Drawing.Color.White;
+            this.maskCurrentUrlBtn.Location = new System.Drawing.Point(581, 71);
+            this.maskCurrentUrlBtn.Name = "maskCurrentUrlBtn";
+            this.maskCurrentUrlBtn.Size = new System.Drawing.Size(91, 23);
+            this.maskCurrentUrlBtn.TabIndex = 8;
+            this.maskCurrentUrlBtn.Text = "屏蔽当前网站";
+            this.maskCurrentUrlBtn.UseVisualStyleBackColor = false;
+            this.maskCurrentUrlBtn.Click += new System.EventHandler(this.maskCurrentUrlBtn_Click);
+            // 
+            // autoAnswerBtn
+            // 
+            this.autoAnswerBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.autoAnswerBtn.FlatAppearance.BorderSize = 0;
+            this.autoAnswerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.autoAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoAnswerBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.autoAnswerBtn.ForeColor = System.Drawing.Color.White;
+            this.autoAnswerBtn.Location = new System.Drawing.Point(408, 16);
+            this.autoAnswerBtn.Name = "autoAnswerBtn";
+            this.autoAnswerBtn.Size = new System.Drawing.Size(90, 25);
+            this.autoAnswerBtn.TabIndex = 3;
+            this.autoAnswerBtn.Text = "自动搜索";
+            this.autoAnswerBtn.UseVisualStyleBackColor = false;
+            this.autoAnswerBtn.Click += new System.EventHandler(this.autoAnswerBtn_Click);
             // 
             // guideLabel
             // 
@@ -182,7 +213,7 @@
             this.resultsTable.Location = new System.Drawing.Point(3, 3);
             this.resultsTable.Name = "resultsTable";
             this.resultsTable.RowCount = 1;
-            this.resultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 511F));
+            this.resultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 512F));
             this.resultsTable.Size = new System.Drawing.Size(670, 473);
             this.resultsTable.TabIndex = 7;
             // 
@@ -203,7 +234,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(684, 509);
-            this.tabControl1.TabIndex = 8;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -230,45 +261,21 @@
             this.tabPage2.Text = "浏览器检索结果";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(670, 473);
-            this.webBrowser1.TabIndex = 0;
-            // 
             // nextResultPageBtn
             // 
             this.nextResultPageBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.nextResultPageBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.nextResultPageBtn.FlatAppearance.BorderSize = 0;
             this.nextResultPageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextResultPageBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nextResultPageBtn.ForeColor = System.Drawing.Color.Black;
-            this.nextResultPageBtn.Location = new System.Drawing.Point(628, 157);
+            this.nextResultPageBtn.Location = new System.Drawing.Point(631, 157);
             this.nextResultPageBtn.Name = "nextResultPageBtn";
-            this.nextResultPageBtn.Size = new System.Drawing.Size(45, 119);
+            this.nextResultPageBtn.Size = new System.Drawing.Size(43, 119);
             this.nextResultPageBtn.TabIndex = 0;
             this.nextResultPageBtn.Text = ">";
             this.nextResultPageBtn.UseVisualStyleBackColor = true;
             this.nextResultPageBtn.Click += new System.EventHandler(this.nextResultPageBtn_Click);
-            // 
-            // autoAnswerBtn
-            // 
-            this.autoAnswerBtn.BackColor = System.Drawing.Color.LimeGreen;
-            this.autoAnswerBtn.FlatAppearance.BorderSize = 0;
-            this.autoAnswerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.autoAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.autoAnswerBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.autoAnswerBtn.ForeColor = System.Drawing.Color.White;
-            this.autoAnswerBtn.Location = new System.Drawing.Point(408, 16);
-            this.autoAnswerBtn.Name = "autoAnswerBtn";
-            this.autoAnswerBtn.Size = new System.Drawing.Size(90, 25);
-            this.autoAnswerBtn.TabIndex = 3;
-            this.autoAnswerBtn.Text = "自动搜索";
-            this.autoAnswerBtn.UseVisualStyleBackColor = false;
-            this.autoAnswerBtn.Click += new System.EventHandler(this.autoAnswerBtn_Click);
             // 
             // preResultPageBtn
             // 
@@ -286,20 +293,14 @@
             this.preResultPageBtn.UseVisualStyleBackColor = false;
             this.preResultPageBtn.Click += new System.EventHandler(this.preResultPageBtn_Click);
             // 
-            // maskCurrentUrlBtn
+            // webBrowser1
             // 
-            this.maskCurrentUrlBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maskCurrentUrlBtn.BackColor = System.Drawing.Color.Tomato;
-            this.maskCurrentUrlBtn.FlatAppearance.BorderSize = 0;
-            this.maskCurrentUrlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maskCurrentUrlBtn.ForeColor = System.Drawing.Color.White;
-            this.maskCurrentUrlBtn.Location = new System.Drawing.Point(581, 71);
-            this.maskCurrentUrlBtn.Name = "maskCurrentUrlBtn";
-            this.maskCurrentUrlBtn.Size = new System.Drawing.Size(91, 23);
-            this.maskCurrentUrlBtn.TabIndex = 8;
-            this.maskCurrentUrlBtn.Text = "屏蔽当前网站";
-            this.maskCurrentUrlBtn.UseVisualStyleBackColor = false;
-            this.maskCurrentUrlBtn.Click += new System.EventHandler(this.maskCurrentUrlBtn_Click);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(670, 473);
+            this.webBrowser1.TabIndex = 1;
             // 
             // Main
             // 
